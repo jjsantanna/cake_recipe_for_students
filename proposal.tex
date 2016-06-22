@@ -1,0 +1,59 @@
+\documentclass{libs/sig-alternate} % Latex template for Bachelor proposal
+
+%\documentclass[a4paper]{llncs} % Latex template for Master
+%\documentclass[]{article} %for a different format
+%\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry} %for a different format
+
+\usepackage{graphicx}
+\usepackage{subfigure,dblfloatfix} %to fix the problem of [h!] [t!] [!b]
+\usepackage[table]{xcolor} 
+\usepackage{caption}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, citecolor=blue, filecolor=black, linkcolor=blue,urlcolor=blue}
+%\def\UrlBreaks{\do\/\do-} %break BIG URLs
+\usepackage{libs/gantt} %for the planning table
+\newcommand\comment[1]{{\sffamily\textbf{[COMMENT: #1]}}}
+
+\begin{document}
+
+
+\title{Your Title}
+
+%TEMPLATE OF AUTHORS FOR BACHELOR
+\numberofauthors{1}
+\author{
+	\alignauthor
+	Your Name\\
+    \affaddr{University of Twente}\\
+    \email{youremail@student.utwente.nl}
+}
+
+%TEMPLATE OF AUTHORS FOR MASTER
+%\author{Your Name}
+%	\institute{University of Twente\\  
+%	\email{youremail@student.utwente.nl}
+%	}
+%}
+
+\maketitle
+
+\begin{abstract}
+
+\comment{The structure of an average abstract should have the (i) context, (ii) problem, (iii) proposal, and your most astonishing (iv) finding. Your goal is to meet $\pm$100 words. The ``context'' part describes what your reader should know to understand your research. The ``problem'' part describes why your research need to be don; why it is interesting; and why someone needs to spend time reading your work. The ``proposal'' part describes what your approach has different from others. Finally, your ``finding'' part surprises your reader, make him VERY interested to read your paper. In a proposal you ``findings'' part describes what do you expect to be the most astonishing achievement of your research.}
+
+\end{abstract}
+\input{sections/01_introduction}
+\input{sections/02_relatedwork}
+\input{sections/03_proposal}
+\input{sections/04_results}
+%\input{sections/05_conclusions}
+\input{sections/00_planning}
+
+\newpage
+\bibliographystyle{libs/splncs}
+\bibliography{bibliography}
+
+
+\input{sections/IMPORTANT}
+
+\end{document} 
