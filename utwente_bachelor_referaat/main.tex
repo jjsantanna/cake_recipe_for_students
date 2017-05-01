@@ -1,0 +1,132 @@
+%
+\documentclass{sig-alternate-br}
+
+\usepackage{graphicx}
+\usepackage{subfigure,dblfloatfix} %to fix the problem of [h!] [t!] [!b]
+\usepackage{caption}
+
+\usepackage[table]{xcolor} 
+
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
+
+\usepackage{libs/gantt} %for the planning table
+\newcommand\comment[1]{{\sffamily\textbf{[COMMENT: #1]}}}
+
+\begin{document}
+%
+% --- Author Metadata here --- DO NOT REMOVE OR CHANGE 
+\conferenceinfo{13$^{th}$ Twente Student Conference on IT}{June 21$^{st}$, 2010, Enschede, The Netherlands.}
+\CopyrightYear{2010} % Allows default copyright year (200X) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Bachelor's Student Conference Proceedings Paper in LaTeX Template}
+% In Bachelor Referaat at University of Twente the use of a subtitle is discouraged.
+% \subtitle{[Instructions]}
+
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{3} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+1st Author\\
+       \affaddr{University of Twente}\\
+       \affaddr{P.O. Box 217, 7500AE Enschede}\\
+       \affaddr{The Netherlands}\\
+       \email{1st author's email address}
+% 2nd. author
+\alignauthor 2nd Author\\
+       \affaddr{2nd author's affiliation}\\
+       \affaddr{1st line of address}\\
+       \affaddr{2nd line of address}\\
+       \email{2nd author's email address}
+% 3rd. author
+\alignauthor 3rd Author\\
+       \affaddr{3rd author's affiliation}\\
+       \affaddr{1st line of address}\\
+       \affaddr{2nd line of address}\\
+       \email{3rd author's email address}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+\additionalauthors{Additional authors: John Smith (The
+Th{\o}rv{\"a}ld Group, email: {\texttt{jsmith@affiliation.org}})
+and Julius P.~Kumquat (The Kumquat Consortium, email:
+{\texttt{jpkumquat@consortium.net}}).}
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+In this paper, we describe the formatting guidelines for ACM SIG Proceedings.  
+\end{abstract}
+
+% A category with the (minimum) three required fields (NOT USED in Bachelor Referaat)
+% \category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+% \category{D.2.8}{Software Engineering}{Metrics}[complexity
+% measures, performance measures]
+
+\keywords{Keywords are your own designated keywords.}
+
+\begin{abstract}
+
+\comment{The structure of an average abstract should have the (i) context, (ii) problem, (iii) proposal, and your most astonishing (iv) finding. Your goal is to meet $\pm$100 words. The ``context'' part describes what your reader should know to understand your research. The ``problem'' part describes why your research need to be don; why it is interesting; and why someone needs to spend time reading your work. The ``proposal'' part describes what your approach has different from others. Finally, your ``finding'' part surprises your reader, make him VERY interested to read your paper. In a proposal you ``findings'' part describes what do you expect to be the most astonishing achievement of your research.}
+
+\end{abstract}
+\input{sections/01_introduction}
+\input{sections/02_relatedwork}
+\input{sections/03_proposal}
+\input{sections/04_results}
+%\input{sections/05_conclusions}
+\input{sections/00_planning}
+
+\newpage
+\bibliography{bibliography}
+
+\newpage
+\input{sections/IMPORTANT}
+
+\end{document}
