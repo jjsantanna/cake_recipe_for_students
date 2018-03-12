@@ -1,0 +1,47 @@
+\documentclass{libs/sig-alternate}
+
+\usepackage{graphicx}
+\usepackage{subfigure,dblfloatfix} %to fix the problem of [h!] [t!] [!b]
+\usepackage{caption}
+
+\usepackage{soul}
+\usepackage[table]{xcolor} 
+
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, citecolor=blue, filecolor=black, linkcolor=blue, urlcolor=blue}
+
+\usepackage{libs/gantt} %for the planning table
+\newcommand\comment[1]{{\sffamily\textbf{[COMMENT: #1]}}}
+
+\begin{document}
+
+\title{<Title>}
+
+\numberofauthors{1} 
+\author{
+\alignauthor
+	<Your name>\\
+    \affaddr{University of Twente}\\
+    \email{1st author's email address}
+}
+
+
+\maketitle
+
+
+\section*{IMPORTANT NOTES:}
+Before everything, I do recommend the lecture at \url{https://www.youtube.com/watch?v=g3dkRsTqdDA}. Please, avoid vague words: relatively, possible, high, low, a lot, a few, ... Be quantitative! give an idea of numbers. Avoid start sentences with 'because'. 
+	
+
+\input{sections/abstract}
+\input{sections/01_introduction}
+\input{sections/02_relatedwork}
+\input{sections/03_proposal}
+
+\input{sections/00_planning}
+
+\newpage
+\bibliography{bibliography}
+
+
+\end{document}
