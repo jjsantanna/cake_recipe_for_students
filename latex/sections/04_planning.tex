@@ -8,7 +8,7 @@ More examples on how to do a planning table you can see in \url{http://www.marti
 \begin{figure*}[t!]
 	\centering
 	%	\noindent\resizebox{0.6\textwidth}{!}{
-	\begin{gantt}[xunitlength=0.5cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{14}{18} %(1)lines (2) columns
+	\begin{gantt}[xunitlength=0.5cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{15}{18} %(1)lines (2)columns
 		
 		\begin{ganttitle} %Month
 			\titleelement{\textbf{Planning Table}}{18}
@@ -42,6 +42,19 @@ More examples on how to do a planning table you can see in \url{http://www.marti
 		\ganttbarcon{task 7}{14}{2}
 		
 		\ganttmilestone{Deadline}{17}
+		
+		\ganttbar[pattern=vertical lines]{Writing}{1}{2}
+		\addtocounter{ganttnum}{1}
+		\ganttmilestone[color=red]{}{3}
+		\addtocounter{ganttnum}{1}
+		\ganttbar[pattern=vertical lines]{}{6}{2}
+		\addtocounter{ganttnum}{1}
+		\ganttmilestone[color=red]{}{8}
+		\addtocounter{ganttnum}{1}
+		\ganttbar[pattern=vertical lines]{}{10}{2}
+		\addtocounter{ganttnum}{1}
+		\ganttmilestone[color=red]{}{12}
+		
 	\end{gantt}	
 	%	}
 %	\caption{Planning Table}
