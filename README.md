@@ -16,3 +16,4 @@ The final assignment of a Master course is composed of 2 parts: (1) literature s
 
 I will request you to give a presentation for a closed group of researchers. Then you will start working on your thesis. 
 
+# MOST IMPORTANT, besides the assessment forms, what grade do you consider an external reviewer would give to your report?
