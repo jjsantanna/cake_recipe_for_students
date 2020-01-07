@@ -1,0 +1,53 @@
+\section{Planning}
+ In this section we will shortly discuss the planning of the study. The study has been split into six parts, as can be seen in the table below. Note that a planning such as this when is to be seen as a guideline. There are however some hard deadlines for handing in drafts and final versions. Here we have an overview of the deadlines:
+ \begin{itemize}	
+	\item December 1st: Final proposal submission
+	\item January 19th: Draft paper submission
+	\item January 26th: Final paper submission
+	\item January 31th: Conference presentation
+\end{itemize}
+The planning is made in order to adhere to these submission deadlines.
+
+% More examples on how to do a planning table you can see in \url{http://www.martin-kumm.de/wiki/doku.php?id=05Misc:A_LaTeX_package_for_gantt_plots}
+
+\begin{figure}[ht]
+		\noindent\resizebox{0.49\textwidth}{!}{
+	\begin{gantt}[xunitlength=0.5cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{15}{12} %(1)lines (2)columns
+		
+		\begin{ganttitle} %Month
+			\titleelement{\textbf{Planning Table}}{12}
+		\end{ganttitle}
+		
+		\begin{ganttitle} %Month
+			\titleelement{November}{3}
+			\titleelement{December}{5}
+			\titleelement{January}{4}
+		\end{ganttitle}
+		\begin{ganttitle} % Week number
+			\numtitle{1}{1}{12}{1}
+		\end{ganttitle}
+		\ganttbar[color=gray]{Proposal}{0}{3}
+		\ganttmilestone[color=orange]{Draft proposal}{2}
+		\ganttmilestone[color=red]{Final proposal}{3}
+		\ganttbar[pattern=grid,color=orange]{Writing}{3}{8}
+		\ganttbar[color=blue]{RQ1}{3}{1}
+		\ganttcon{3}{3}{3}{7}
+		\ganttbarcon[color=blue]{RQ2}{4}{2}
+		\ganttbar[pattern=grid,color=red]{Holidays}{6}{2}
+		\ganttbar[color=blue]{RQ3}{8}{2}
+		\ganttcon{6}{8}{8}{10}
+		\ganttbarcon[color=blue]{RQ4}{10}{1}
+		\ganttmilestone[color=orange]{Draft Paper submission}{10}
+		\ganttmilestone[color=red]{Final Paper submission}{11}
+		\ganttbar[color=green]{Presentation}{11}{1}
+		\ganttcon{11}{11}{11}{14}
+
+	\end{gantt}	
+		}
+\end{figure}
+
+
+
+% The research topics part consists solely of a literature study that focuses on ... All relevant information learned from this will be integrated in a survey that will form the first part of the thesis.
+
+% Following the research topics are each of the research questions, with time allotted at the end of each research question to integrate the results into the thesis. 

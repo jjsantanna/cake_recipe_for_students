@@ -1,0 +1,108 @@
+%-------------------------------------------------------------------------------
+% DEFINE THE DOCUMENT TEMPLATE (FROM SIGCOM, ACM, IEEE, ...)
+%-------------------------------------------------------------------------------
+\documentclass{libs/sig-alternate}
+
+%USING SIGCOM TEMPLATE
+%\documentclass[sigconf,natbib=true]{acmart}
+%\settopmatter{printacmref=false} % Removes citation information below abstract
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+%-------------------------------------------------------------------------------
+% PACKAGES FOR URL
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=blue, filecolor=blue, linkcolor=blue, urlcolor=blue}
+%\usepackage{breakurl}
+%\usepackage[hyphens]{url}
+
+%-------------------------------------------------------------------------------
+% PACKAGES AND COMMANDS FOR TABLES 
+%-------------------------------------------------------------------------------
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{color,colortbl,xcolor}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%-------------------------------------------------------------------------------
+% PACKAGES FOR FIGURES
+%-------------------------------------------------------------------------------
+\usepackage{graphicx,graphics,float,subfigure,wrapfig,epstopdf}
+\usepackage{dblfloatfix}%to fix the problem of [h!] [t!] [!b]
+\epstopdfsetup{update}
+%-------------------------------------------------------------------------------
+% PACKAGES FOR REFERENCE LIST FORMAT 
+%-------------------------------------------------------------------------------
+\usepackage[square,numbers]{natbib}%options: round; square; curly; angle; colon; comma; authoryear; numbers; super; sort; sort&compress; longnamesfirst; sectionbib; nonamebreak;
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}} % defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+
+%-------------------------------------------------------------------------------
+% PACKEGE FOR CREATING GANTT VISUALIZATION (PLANNING TABLE) 
+%-------------------------------------------------------------------------------
+\usepackage{soul}
+\usepackage{libs/gantt} %for the planning table
+%-------------------------------------------------------------------------------
+% CREATING COMMANDS FOR AUTOREF 
+%-------------------------------------------------------------------------------
+\renewcommand{\chapterautorefname }{\S}
+\renewcommand{\sectionautorefname}{\S}
+\renewcommand{\subsectionautorefname}{\S}
+\renewcommand{\subsubsectionautorefname}{\S}
+\newcommand{\subfigureautorefname}{\figureautorefname}
+%-------------------------------------------------------------------------------
+% CREATING COMMANDS FOR MAKING COMMENTS
+%-------------------------------------------------------------------------------
+\newcommand\comment[1]{{\noindent\sffamily\textbf{[COMMENT: #1]}}}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{document}
+
+
+%if "acmart" then the following title and keywords:
+%\title{<YOUR TITLE>}
+%\author{<Your Name>}
+%\email{<your email>}
+%\affiliation{\institution{University of Twente}}
+%\maketitle
+%\input{sections/abstract}
+%\keywords{keyword1, keyword2, keyword3, keyword4, keyword5}
+
+\title{Title}
+
+\numberofauthors{2} 
+
+\author{
+	\alignauthor
+	Student\\
+	\affaddr{University of Twente}\\
+	\email{s-number@student.utwente.nl}
+	% 2nd. author
+	\alignauthor
+	Jair Santanna\\
+	\affaddr{University of Twente \& Northwave}\\
+	\email{j.j.santanna@utwente.nl}\\
+	\email{jair.santanna@northwave.nl}
+}
+
+\maketitle
+%-------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------
+\input{sections/abstract}
+\input{sections/01_introduction}
+\input{sections/02_relatedwork}
+\input{sections/03_methodologies}
+\input{sections/04_planning}
+%-------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------
+\newcommand{\newblock}{}
+\bibliographystyle{unsrtnat} %abbrvnat OR unsrtnat OR plainnat
+\bibliography{my_bibliography}
+%-------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------
+\input{sections/IMPORTANT}
+
+\end{document}
