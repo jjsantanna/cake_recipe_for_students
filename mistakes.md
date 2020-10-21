@@ -1,2 +1,3 @@
 # Minor overall common mistakes:
 - **Acronyms.** You should first write the full term then, between parenthesis, write the acronym. For example: Azure Active Directory (AAD). After introducing an acronym you can use it without writing the full term for at least a session. If you feel the need to define again the acronym in another session or chapter please do so. You don’t want the reader to stop his/her reading flow to check acronyms in another page.
+- **Avoid say that "you'll try".** Instead of "try" you should use "intend".
