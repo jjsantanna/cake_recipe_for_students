@@ -147,7 +147,10 @@ b. Compare error intersection of errors:
    | LLM4 | 0    | 10   | 7    | 30   |
 
 c. Investigate error related to input length (bin prompts by size, check error rates).
+
 d. Investigate whether `confidence=high` correlates with correctness.
+
 e. Investigate error categories: Formatting error, Hallucination, Reasoning flaw
+
 f. Other visualizations: Bar plots (accuracy by model), Violin plots (latency distributions), Heatmaps (error overlaps, time vs accuracy trade-offs)
-ow.
+
