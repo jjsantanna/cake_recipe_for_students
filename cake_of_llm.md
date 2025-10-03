@@ -44,7 +44,8 @@ There are **3 main stages**:
    * Consider **parallel processing** and **batch size**.
   
 3. **Fix Decoding Parameters for Reproducibility**
-   Use deterministic decoding:
+  > ⚠️ Ideally you should use the following paramethers to make the results deterministic.
+
    - `temperature = 0` → *no creativity, maximum consistency*
    - `top_p = 1` → *include full token distribution*
    - `top_k = 0` → *no cutoff, use all tokens*
